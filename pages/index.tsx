@@ -1,5 +1,7 @@
+import Blogs from "components/Blogs";
 import Hero from "components/Hero";
 import TechStack from "components/TechStack";
+import Work from "components/Work";
 import Head from "next/head";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <main className="">
         <Hero />
         <TechStack />
+        <Work />
+        <Blogs />
       </main>
     </>
   );

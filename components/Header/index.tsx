@@ -5,10 +5,10 @@ const Header = () => {
   let translateY = open ? 0 : -1000;
   // const [translateY, setTranslateY] = useState<Number>(-1000);
   return (
-    <nav className=" relative px-5 py-2 mt-4 bg-secondary rounded-xl">
+    <nav className="relative py-2 mt-4 rounded-xl">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-white font-semibold text-4xl">
+          <h1 className="text-white font-bold text-4xl">
             YZ<span className="text-primary">.</span>
           </h1>
         </div>
