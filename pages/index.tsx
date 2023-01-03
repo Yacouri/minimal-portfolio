@@ -1,4 +1,5 @@
 import Hero from "components/Hero";
+import TechStack from "components/TechStack";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main className="">
         <Hero />
+        <TechStack />
       </main>
     </>
   );

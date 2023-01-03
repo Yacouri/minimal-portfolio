@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import EyeIcon from "assets/images/eye.png";
 
 const Hero = () => {
   return (
@@ -12,6 +14,12 @@ const Hero = () => {
         <p className="text-muted font-medium">
           Working as a Frontend Web Developer & Ui/UX Designer at ELBOTOLA
         </p>
+      </div>
+      <div className="mt-10">
+        <button className="flex gap-4 px-6 py-3 bg-secondary rounded-xl">
+          <Image src={EyeIcon.src} width={20} height={20} alt="Eye icon" />
+          <p className="font-medium text-white">View Resume</p>
+        </button>
       </div>
     </div>
   );
