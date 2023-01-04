@@ -1,10 +1,17 @@
+import { useQuery } from "@tanstack/react-query";
 import Blogs from "components/Blogs";
 import Hero from "components/Hero";
 import TechStack from "components/TechStack";
 import Work from "components/Work";
 import Head from "next/head";
+import { useState } from "react";
+import { getArticles } from "services/article";
 
-export default function Home() {
+export default function Home(props: TResponse) {
+  const { data, isFetching, error } = useQuery<TResponse, Error>({
+    queryKey: ["articles"],
+    queryFn: getArticles,
+  });
   return (
     <>
       <Head>
@@ -13,12 +20,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className="">
         <Hero />
         <TechStack />
         <Work />
-        <Blogs />
+        <Blogs articles={props.articles} />
       </main>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      articles: await getArticles(),
+    },
+  };
+};
