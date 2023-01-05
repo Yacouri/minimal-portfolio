@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body{
     font-family: 'Raleway', sans-serif;
     background-color: #0F1319

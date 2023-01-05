@@ -11,7 +11,7 @@ type TStack = {
 
 const TechStack = () => {
   return (
-    <div className="relative mt-[100px]">
+    <div className="relative mt-[100px]" id="tech-stack">
       <Image
         src={bluredElipse}
         width={400}

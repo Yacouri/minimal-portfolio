@@ -6,7 +6,7 @@ import p2 from "assets/images/p2.png";
 
 const Work = () => {
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[100px]" id="work">
       <SectionHeader
         title="Work"
         caption="Take a look at some of the applications, articles, and companies I've dedicated my time to."

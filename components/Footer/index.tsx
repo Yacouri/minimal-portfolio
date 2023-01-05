@@ -13,16 +13,19 @@ const Footer = () => {
       </div>
       <div className="flex flex-col gap-2 md:justify-between md:items-center md:flex-row mb-10">
         <div className="flex gap-10">
-          <a href="#" className="text-muted font-semibold">
+          <a href="#tech-stack" className="text-muted font-semibold">
             Skills.
           </a>
-          <a href="#" className="text-muted font-semibold">
-            About.
-          </a>
-          <a href="#" className="text-muted font-semibold">
+          <a href="#work" className="text-muted font-semibold">
             Work.
           </a>
-          <a href="#" className="text-muted font-semibold">
+          <a href="#blog" className="text-muted font-semibold">
+            Blog.
+          </a>
+          <a
+            href="mailto:co.yacouri@gmail.com"
+            className="text-muted font-semibold"
+          >
             Contact.
           </a>
         </div>
