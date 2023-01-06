@@ -4,10 +4,9 @@ import Hero from "components/Hero";
 import TechStack from "components/TechStack";
 import Work from "components/Work";
 import Head from "next/head";
-import { useState } from "react";
 import { getArticles } from "services/article";
 
-export default function Home(props: TResponse) {
+export default function Home({ articles }: TArticles) {
   const { data, isFetching, error } = useQuery<TResponse, Error>({
     queryKey: ["articles"],
     queryFn: getArticles,
@@ -25,7 +24,7 @@ export default function Home(props: TResponse) {
         <Hero />
         <TechStack />
         <Work />
-        <Blogs articles={props.articles} />
+        <Blogs articles={articles} />
       </main>
     </>
   );
@@ -33,8 +32,6 @@ export default function Home(props: TResponse) {
 
 export const getStaticProps = async () => {
   return {
-    props: {
-      articles: await getArticles(),
-    },
+    props: { articles: await getArticles() },
   };
 };

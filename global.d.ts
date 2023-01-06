@@ -1,7 +1,26 @@
 export {};
 
 declare global {
-  type TResponse = TArticles;
+  type TArticleContent = {
+    id: number;
+    type_of: string;
+    title: string;
+    description: string;
+    readable_publish_date: string;
+    slug: string;
+    // published_timestamp: string;
+    cover_image: string;
+    social_image: string;
+    canonical_url: string;
+    // created_at: string;
+    // edited_at: string;
+    // published_at: string;
+    // last_comment_at: string;
+    reading_time_minutes: number;
+    tags: string[];
+    body_html: string;
+    // body_markdown: string
+  };
   type TArticle = {
     id: number;
     title: string;
@@ -26,4 +45,5 @@ declare global {
     // };
   };
   type TArticles = { articles: TArticle[] };
+  type TResponse = TArticle[];
 }

@@ -4,6 +4,7 @@ import b1 from "assets/images/b1.png";
 import b2 from "assets/images/b2.png";
 import Image from "next/image";
 import Link from "next/link";
+import Tag from "components/shared/Tag";
 
 const Blog = (props: TArticle) => {
   const {
@@ -14,10 +15,11 @@ const Blog = (props: TArticle) => {
     slug,
     reading_time_minutes,
     readable_publish_date,
+    tag_list,
   } = props;
 
   return (
-    <Link href={`/blog/${id}`}>
+    <Link href={`/blog/${id}/${slug}`}>
       <div className="p-5 bg-secondary rounded-xl">
         {/* <div className="flex items-center">
           <Image
@@ -29,8 +31,16 @@ const Blog = (props: TArticle) => {
           />
         </div> */}
         <div className="">
-          <h1 className="text-white font-bold text-xl mb-2">{title}</h1>
-          <p className="text-muted font-medium mb-3">{description}</p>
+          <div className="flex justify-between mb-2">
+            <div className="flex gap-1">
+              {tag_list.map((tag, index) => (
+                <Tag label={tag} key={index} />
+              ))}
+            </div>
+            <p className="text-muted mb-3">{reading_time_minutes} mins read</p>
+          </div>
+          <h1 className="text-white font-bold text-xl">{title}</h1>
+          <p className="text-muted font-medium">{description}</p>
           {/* <Link className="text-primary" href={slug}>
             Read ◥
           </Link> */}
