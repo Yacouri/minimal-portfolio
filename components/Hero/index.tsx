@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import EyeIcon from "assets/images/eye.png";
+import seoConfig from "seo.json";
 
 const Hero = () => {
   return (
@@ -16,10 +17,15 @@ const Hero = () => {
         </p>
       </div>
       <div className="mt-10">
-        <button className="flex gap-4 px-6 py-3 bg-secondary rounded-xl">
+        <a
+          href={seoConfig.resume_url}
+          target="_blank"
+          rel="noreferrer"
+          className="flex gap-4 px-6 py-3 bg-secondary rounded-xl w-fit"
+        >
           <Image src={EyeIcon.src} width={20} height={20} alt="Eye icon" />
           <p className="font-medium text-white">View Resume</p>
-        </button>
+        </a>
       </div>
     </div>
   );

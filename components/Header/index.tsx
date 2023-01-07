@@ -56,22 +56,22 @@ const Header = () => {
           className={`flex flex-col absolute translate-y-[${translateY}px] transition-all w-full bg-secondary left-0 p-4 rounded-lg gap-5 mt-5 md:hidden`}
         >
           <li>
-            <a href="#" className="nav-link">
-              Home.
-            </a>
-          </li>
-          <li>
-            <a href="#" className="nav-link">
+            <a href="#tech-stack" className="nav-link">
               Stack
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a href="#work" className="nav-link">
+              Work
+            </a>
+          </li>
+          <li>
+            <a href="#blog" className="nav-link">
               Blog
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a href="mailto:co.yacouri@gmail.com" className="nav-link">
               Contact
             </a>
           </li>
