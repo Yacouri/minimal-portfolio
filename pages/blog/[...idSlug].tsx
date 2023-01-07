@@ -18,7 +18,10 @@ const ArticleContent = (props: TArticleContent) => {
       </div>
       <h1 className="text-white text-4xl font-bold">{title}</h1>
       <p className="text-primary mt-3">{reading_time_minutes} minutes read</p>
-      <div dangerouslySetInnerHTML={{ __html: body_html }} className="mt-10" />
+      <div
+        dangerouslySetInnerHTML={{ __html: body_html }}
+        className="mt-10 prose md:prose-lg md:prose-invert"
+      />
     </div>
   );
 };
