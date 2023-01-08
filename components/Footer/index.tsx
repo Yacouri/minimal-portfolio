@@ -13,7 +13,7 @@ const Footer = () => {
           YZ<span className="text-primary">.</span>
         </h1>
         <p className="text-muted font-semibold">
-          Yacouri © 2022, All rights reserved.
+          Yacouri © {new Date().getFullYear()}, All rights reserved.
         </p>
       </div>
       <div className="flex flex-col gap-2 md:justify-between md:items-center md:flex-row mb-10">
