@@ -18,19 +18,19 @@ const Header = () => {
         <div>
           <ul className="hidden md:flex gap-9">
             <li>
-              <a href="#tech-stack" className="nav-link">
+              <Link href="/#tech-stack" className="nav-link">
                 Stack
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#work" className="nav-link">
+              <Link href="/#work" className="nav-link">
                 Work
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#blog" className="nav-link">
+              <Link href="/#blog" className="nav-link">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
               <a href="mailto:co.yacouri@gmail.com" className="nav-link">
@@ -56,19 +56,19 @@ const Header = () => {
           className={`flex flex-col absolute translate-y-[${translateY}px] transition-all w-full bg-secondary left-0 p-4 rounded-lg gap-5 mt-5 md:hidden`}
         >
           <li>
-            <a href="#tech-stack" className="nav-link">
+            <Link href="/#tech-stack" className="nav-link">
               Stack
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#work" className="nav-link">
+            <Link href="/#work" className="nav-link">
               Work
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#blog" className="nav-link">
+            <Link href="/#blog" className="nav-link">
               Blog
-            </a>
+            </Link>
           </li>
           <li>
             <a href="mailto:co.yacouri@gmail.com" className="nav-link">

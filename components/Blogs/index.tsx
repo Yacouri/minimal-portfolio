@@ -55,7 +55,7 @@ const Blogs = ({ articles }: TArticles) => {
     <div className="mt-[100px]" id="blog">
       <SectionHeader
         title="Blog"
-        caption="Take a look at some of the applications, articles, and companies I've dedicated my time to."
+        caption="Sometimes i write articles about, Tech tutorials, Design and sharing my thoughts..."
       />
       <div className="flex flex-col gap-3 mt-10">
         {articles?.map((article, index) => (
