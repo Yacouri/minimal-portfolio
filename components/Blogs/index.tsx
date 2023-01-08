@@ -31,7 +31,7 @@ const Blog = (props: TArticle) => {
           />
         </div> */}
         <div className="">
-          <div className="flex justify-between mb-2">
+          <div className="flex flex-col justify-between mb-2 md:flex-row">
             <div className="flex gap-1">
               {tag_list.map((tag, index) => (
                 <Tag label={tag} key={index} />

@@ -13,7 +13,7 @@ const Hero = () => {
           <span className="absolute left-0 top-0 p-1 blur-sm shadow-primary bg-primary rounded-full"></span>
         </span>
         <p className="text-muted font-medium">
-          Currently working at ELBOTOLA Media The #1 Sports app in the Morocco.
+          Currently working at ELBOTOLA Media The #1 Sports app in Morocco.
         </p>
       </div>
       <div className="mt-10">
