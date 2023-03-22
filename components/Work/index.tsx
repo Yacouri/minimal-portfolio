@@ -49,7 +49,7 @@ const Work = () => {
   return (
     <div className="mt-[100px]" id="work">
       <SectionHeader
-        title="Take look of what i'm working on..."
+        title="Check out what I'm working on."
         caption="As someone who love build in public concept, i'am currently working on Bafancy"
       />
       <div className="flex flex-col gap-2 md:flex-row mt-10">
