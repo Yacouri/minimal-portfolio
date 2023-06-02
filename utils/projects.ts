@@ -1,20 +1,27 @@
-import bafancyCover from "assets/images/p1.png";
-import bafancyCover2 from "assets/images/bafancy.png";
-import NextJsPortfolioCover from "assets/images/p2.png";
+import bafancyAppThumb from "assets/images/bafancy-project.png";
+import CryptoKuuCoinThumb from "assets/images/crypto-project.png";
+import DigitalAgencyThumb from "assets/images/digital-agency-project.png";
 
 export const projects = [
   {
-    name: "Bafancy Editor",
+    title: "Bafancy - App",
+    path: "bafancy-app",
     url: "https://bafancy.com",
-    cover: bafancyCover2.src,
-    stack: ["Javascript", "React.js", "TailwindCss", "Figma"],
-    caption:
-      "A tool with ready to use templates that allows users to create Twitter & LinkedIn banners.",
+    cover: bafancyAppThumb.src,
+    services: ["UI/UX Design", "Development"],
   },
-  // {
-  //   name: "NextJs-Ts Portfolio",
-  //   cover: NextJsPortfolioCover,
-  //   stack: ["Typescript", "Next.js", "Styled Component", "Figma"],
-  //   caption: "Personal portfolio made in order to learn Typescript.",
-  // },
+  {
+    title: "Crypto - Kuu Coin",
+    path: "crypto-kuu-coin",
+    url: "",
+    cover: CryptoKuuCoinThumb.src,
+    services: ["UI/UX Design"],
+  },
+  {
+    title: "Digital Agency",
+    path: "digital-agency",
+    url: "",
+    cover: DigitalAgencyThumb.src,
+    services: ["UI/UX Design", "Development"],
+  },
 ];

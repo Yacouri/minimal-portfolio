@@ -12,13 +12,13 @@ type TStack = {
 const TechStack = () => {
   return (
     <div className="relative mt-[100px]" id="tech-stack">
-      <Image
+      {/* <Image
         src={bluredElipse}
         width={400}
         height={400}
         alt="blured eliplse"
         className="absolute -z-10 top-[-50%] left-[-40%]"
-      />
+      /> */}
       <SectionHeader
         title="Favorite Tech Stack"
         caption="As a Frontend Developer here are some of the technologies that I am working with."

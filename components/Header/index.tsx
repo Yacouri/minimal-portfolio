@@ -14,7 +14,7 @@ const Header = () => {
   let translateY = open ? 0 : -1000;
   // const [translateY, setTranslateY] = useState<Number>(-1000);
   return (
-    <nav className="relative py-2 mt-4 rounded-xl">
+    <nav className="ctr relative py-2 mt-4 rounded-xl">
       <div className="flex items-center justify-between md:justify-start md:gap-[100px]">
         <div>
           <Link href="/">

@@ -1,27 +1,33 @@
 import SectionHeader from "components/shared/SectionHeader";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React from "react";
 import { technologies, projects } from "utils";
 
 type TProject = {
-  name: string;
+  title: string;
   cover: string;
-  stack: string[];
-  caption: string;
-  url: string;
+  url: string | "";
+  path: string;
+  services: string[];
 };
 
 const Project = (props: TProject) => {
-  const { name, stack, caption, cover, url } = props;
+  const { title, cover, path, services } = props;
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      className="p-5 bg-secondary rounded-xl md:w-full transition-all hover:translate-y-[-2px]"
-    >
-      <Image src={cover} width={628} height={249} alt="" />
-      <div className="flex gap-2 mt-2">
+    <div>
+      <Image
+        src={cover}
+        width={628}
+        height={249}
+        alt=""
+        className="project-card rounded-[58px] p-5"
+      />
+      <Link
+        href={path}
+        className="rounded-xl transition-all hover:translate-y-[-2px]"
+      >
+        {/* <div className="flex gap-2 mt-2">
         {stack.map((tech, index) => (
           <div
             className="flex items-center justify-center w-[40px] h-[40px] bg-[#0F1319] rounded-lg"
@@ -38,26 +44,35 @@ const Project = (props: TProject) => {
             />
           </div>
         ))}
-      </div>
-      <h3 className="text-white font-bold text-2xl mt-2">{name}</h3>
-      <p className="text-muted mt-2">{caption}</p>
-    </a>
+      </div> */}
+        <div className="flex justify-center">
+          {services.map((service, index) => (
+            <p className="text-secondaryText text-lg mt-2" key={index}>
+              {service} {index != services.length - 1 && "/"}
+            </p>
+          ))}
+        </div>
+        <h3 className="text-white font-medium text-2xl text-center">{title}</h3>
+      </Link>
+    </div>
   );
 };
 
 const Work = () => {
   return (
-    <div className="mt-[100px]" id="work">
-      <SectionHeader
-        title="Check out what I'm working on."
-        caption="As someone who love build in public concept, i'am currently working on Bafancy"
-      />
-      <div className="flex flex-col gap-2 md:flex-row mt-10">
+    <>
+      <div className="ctr mt-[100px]" id="work">
+        <SectionHeader
+          title="Work"
+          caption="As someone who love build in public concept, i'am currently working on Bafancy"
+        />
+      </div>
+      <div className="scroll-bar flex">
         {projects.map((project: TProject, index) => (
           <Project {...project} key={index} />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

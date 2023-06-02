@@ -7,12 +7,10 @@ import { getArticles } from "services/article";
 export default function Home({ articles }: TArticles) {
   return (
     <>
-      <main>
-        <Hero />
-        <TechStack />
-        <Work />
-        <Blogs articles={articles} />
-      </main>
+      {/* <Hero /> */}
+      {/* <TechStack /> */}
+      <Work />
+      {/* <Blogs articles={articles} /> */}
     </>
   );
 }
