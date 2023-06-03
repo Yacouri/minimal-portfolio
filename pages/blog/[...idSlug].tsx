@@ -1,5 +1,5 @@
-import Seo from "components/shared/SEO";
-import Tag from "components/shared/Tag";
+import Seo from "components/shared/components/SEO";
+import Tag from "components/shared/components/Tag";
 import { GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import React from "react";

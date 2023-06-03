@@ -1,10 +1,11 @@
-import SectionHeader from "components/shared/SectionHeader";
+import SectionHeader from "components/shared/components/SectionHeader";
 import React from "react";
 import b1 from "assets/images/b1.png";
 import b2 from "assets/images/b2.png";
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "components/shared/Tag";
+import Tag from "components/shared/components/Tag";
+import UpRightIcon from "components/shared/icons/up-right";
 
 const Blog = (props: TArticle) => {
   const {
@@ -20,27 +21,13 @@ const Blog = (props: TArticle) => {
 
   return (
     <Link href={`/blog/${id}/${slug}`}>
-      <div className="p-5 bg-secondary rounded-xl">
-        {/* <div className="flex items-center">
-          <Image
-            src={social_image}
-            width={150}
-            height={200}
-            className="w-full md:w-fit my-auto"
-            alt=""
-          />
-        </div> */}
+      <div className="blog-card">
         <div className="">
-          <div className="flex flex-col justify-between mb-2 md:flex-row">
-            <div className="flex gap-1">
-              {tag_list.map((tag, index) => (
-                <Tag label={tag} key={index} />
-              ))}
-            </div>
-            <p className="text-muted mb-3">{reading_time_minutes} mins read</p>
+          <div className="flex justify-between items-center">
+            <h1 className="text-secondaryText text-4xl">{title}</h1>
+            <UpRightIcon strokeColor="#fafafa" />
           </div>
-          <h1 className="text-white font-bold text-xl">{title}</h1>
-          <p className="text-muted font-medium">{description}</p>
+          {/* <p className="text-primaryText font-medium">{description}</p> */}
           {/* <Link className="text-primary" href={slug}>
             Read ◥
           </Link> */}
@@ -52,12 +39,12 @@ const Blog = (props: TArticle) => {
 
 const Blogs = ({ articles }: TArticles) => {
   return (
-    <div className="mt-[100px]" id="blog">
+    <div className="ctr mt-[250px]" id="blog">
       <SectionHeader
         title="Blog"
         caption="Sometimes i write articles about, Tech tutorials, Design and sharing my thoughts..."
       />
-      <div className="flex flex-col gap-3 mt-10">
+      <div className="flex flex-col gap-3 mt-150">
         {articles?.map((article, index) => (
           <Blog {...article} key={index} />
         ))}

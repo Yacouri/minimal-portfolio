@@ -1,4 +1,4 @@
-import SectionHeader from "components/shared/SectionHeader";
+import SectionHeader from "components/shared/components/SectionHeader";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -18,33 +18,15 @@ const Project = (props: TProject) => {
     <div>
       <Image
         src={cover}
-        width={628}
-        height={249}
+        width={728}
+        height={349}
         alt=""
-        className="project-card rounded-[58px] p-5"
+        className="project-card max-w-none rounded-[58px] p-5"
       />
       <Link
         href={path}
         className="rounded-xl transition-all hover:translate-y-[-2px]"
       >
-        {/* <div className="flex gap-2 mt-2">
-        {stack.map((tech, index) => (
-          <div
-            className="flex items-center justify-center w-[40px] h-[40px] bg-[#0F1319] rounded-lg"
-            key={index}
-          >
-            <Image
-              src={
-                technologies.find(({ name }) => name == tech)
-                  ?.icon as StaticImageData
-              }
-              alt={tech}
-              width={20}
-              height={20}
-            />
-          </div>
-        ))}
-      </div> */}
         <div className="flex justify-center">
           {services.map((service, index) => (
             <p className="text-secondaryText text-lg mt-2" key={index}>
@@ -67,7 +49,7 @@ const Work = () => {
           caption="As someone who love build in public concept, i'am currently working on Bafancy"
         />
       </div>
-      <div className="scroll-bar flex">
+      <div className="scroll-bar flex overflow-x-scroll gap-5 mt-150">
         {projects.map((project: TProject, index) => (
           <Project {...project} key={index} />
         ))}

@@ -14,7 +14,7 @@ export const technologies = [
   { name: "Next.js", icon: nextjsIcon },
   { name: "Node.js", icon: nodejsIcon },
   { name: "React Query", icon: reactqueryIcon },
-  { name: "React Native", icon: reactjsIcon },
+  // { name: "React Native", icon: reactjsIcon },
   { name: "React.js", icon: reactjsIcon },
   { name: "TailwindCss", icon: tailwindcssIcon },
   { name: "Figma", icon: figmaIcon },

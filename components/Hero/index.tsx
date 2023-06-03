@@ -4,17 +4,18 @@ import EyeIcon from "assets/images/eye.png";
 import seoConfig from "seo.json";
 import Link from "next/link";
 import bluredElipse from "assets/images/blured-elipse.png";
+import UpRightIcon from "components/shared/icons/up-right";
 
 const Hero = () => {
   return (
     <div className="ctr relative mt-[250px]">
-      {/* <Image
+      <Image
         src={bluredElipse}
         width={1000}
         height={1000}
         alt="blured eliplse"
         className="animate-pulse absolute -z-10 top-[-50%] left-[10%]"
-      /> */}
+      />
       <div className="flex items-center gap-3 mt-5">
         <span className="relative p-1 shadow-primary bg-primary rounded-full animate-pulse">
           <span className="absolute left-0 top-0 p-1 blur-sm shadow-primary bg-primary rounded-full"></span>
@@ -40,25 +41,14 @@ const Hero = () => {
             </p>
             <Link
               href="/about"
-              className="block text-secondaryText underline text-lg text-end mt-6"
+              className="flex gap-5 justify-end items-center text-secondaryText underline text-lg mt-6"
             >
               Read more
+              <UpRightIcon strokeColor="#fafafa" />
             </Link>
           </div>
         </div>
       </div>
-      {/* <h2 className="title mt-2">Frontend Developer & Ui/Ux Designer</h2> */}
-      {/* <div className="mt-10">
-        <a
-          href={seoConfig.resume_url}
-          target="_blank"
-          rel="noreferrer"
-          className="flex gap-4 px-6 py-3 bg-secondary rounded-xl w-fit transition-all hover:translate-y-[-2px]"
-        >
-          <Image src={EyeIcon.src} width={20} height={20} alt="Eye icon" />
-          <p className="font-medium text-white">View Resume</p>
-        </a>
-      </div> */}
     </div>
   );
 };

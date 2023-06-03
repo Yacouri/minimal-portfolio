@@ -41,4 +41,20 @@
   .scroll-bar::-webkit-scrollbar {
       display: none;
   }
+  .mt-150 {
+    @apply mt-[150px];
+  }
+  .tech-card {
+    @apply grayscale w-[80px] h-[80px] border border-border rounded-2xl flex items-center justify-center cursor-pointer transition-all hover:grayscale-0;
+  }
+  .blog-card {
+    @apply border border-border rounded-[55px] p-[50px];
+    background: rgba(48, 48, 48, 0.1);
+    backdrop-filter: blur(35px);
+  }
+  .contact-card {
+    @apply border border-border rounded-[58px] p-6;
+    background: rgba(48, 48, 48, 0.1);
+    backdrop-filter: blur(35px);
+  }
 }
