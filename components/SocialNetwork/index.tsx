@@ -1,11 +1,10 @@
 import SectionHeader from "components/shared/components/SectionHeader";
 import Link from "next/link";
 import React from "react";
-import { handles } from "seo.json";
+import seo from "seo.json";
 
-type Props = {};
-
-export default function SocialNetworks({}: Props) {
+export default function SocialNetworks() {
+  const { handles } = seo;
   const socials = [
     { name: "Twitter", url: `https://twitter.com/${handles.twitter}` },
     { name: "Behance", url: `https://behance.net/${handles.behance}` },
