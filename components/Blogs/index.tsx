@@ -24,9 +24,14 @@ const Blog = (props: TArticle) => {
     <Link href={`/blog/${id}/${slug}`}>
       <div className="blog-card">
         <div className="">
-          <div className="flex flex-col md:justify-between md:items-center">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
             <h1 className="text-secondaryText text-xl md:text-4xl">{title}</h1>
-            <UpRightIcon strokeColor="#fafafa" />
+            <div className="flex self-end md:self-center md:block">
+              <span className="inline-flex text-sm underline mr-2 text-white md:hidden">
+                Read more
+              </span>
+              <UpRightIcon strokeColor="#fafafa" />
+            </div>
           </div>
         </div>
       </div>

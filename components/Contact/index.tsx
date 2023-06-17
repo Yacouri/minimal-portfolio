@@ -9,14 +9,16 @@ type Props = {};
 export default function Contact({}: Props) {
   return (
     <AnimatedSection>
-      <div className="ctr mt-[250px]">
+      <div className="ctr section-gap">
         <div className="contact-card">
-          <div className="bg-primary p-10 rounded-[38px]">
-            <div className="mb-[150px]">
-              <p className="text-black text-8xl">Have an idea?</p>
-              <p className="text-black text-8xl">Let&apos;s make it</p>
+          <div className="bg-primary p-8 md:p-10 rounded-[38px]">
+            <div className="mb-[100px] md:mb-[150px]">
+              <p className="text-black text-3xl md:text-8xl">Have an idea?</p>
+              <p className="text-black text-3xl md:text-8xl">
+                Let&apos;s make it
+              </p>
             </div>
-            <div className="flex-col md:flex justify-between items-baseline">
+            <div className="flex-col justify-between items-baseline md:flex-row md:flex">
               <Link
                 href={`mailto:${seo.email}`}
                 className="underline font-semibold text-xl"
@@ -25,7 +27,7 @@ export default function Contact({}: Props) {
               </Link>
               <Link
                 href={`mailto:${seo.email}`}
-                className="flex gap-4 items-center underline text-6xl"
+                className="hidden md:gap-4 md:items-center md:underline text-2xl md:text-6xl md:flex"
               >
                 Contact
                 {/* <UpRightIcon strokeColor="#0A0C0F" /> */}
@@ -35,6 +37,7 @@ export default function Contact({}: Props) {
                   viewBox="0 0 60 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 md:w-10"
                 >
                   <rect
                     x="14"
