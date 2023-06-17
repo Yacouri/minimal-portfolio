@@ -1,3 +1,4 @@
+import AnimatedSection from "components/shared/components/AnimatedSection";
 import SectionHeader from "components/shared/components/SectionHeader";
 import Link from "next/link";
 import React from "react";
@@ -14,13 +15,15 @@ export default function SocialNetworks() {
   ];
   const mapSocials = socials.map(({ name, url }, index) => (
     <Link href={url} target="_blank" rel="noreferrer" key={index}>
-      <span className="text-[100px] text-secondaryText mx-20">◤{name}</span>
+      <span className="text-4xl text-secondaryText mx-4 md:mx-20 md:text-[100px]">
+        ◤{name}
+      </span>
     </Link>
   ));
 
   return (
-    <div>
-      <div className="ctr mt-[250px]">
+    <AnimatedSection>
+      <div className="ctr section-gap">
         <SectionHeader title="Social Network" />
       </div>
       <div className="relative flex overflow-x-hidden">
@@ -32,6 +35,6 @@ export default function SocialNetworks() {
           {mapSocials}
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 }

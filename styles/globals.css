@@ -15,11 +15,14 @@
   .ctr {
     @apply w-full p-5 mx-auto md:max-w-7xl md:p-0;
   }
+  .section-gap {
+    @apply mt-[100px] md:mt-[250px];
+  }
 }
 
 @layer components {
   .title {
-    @apply text-white text-7xl font-medium;
+    @apply text-white text-5xl font-medium md:text-7xl;
   }
   .caption {
     font-family: 'Inter', sans-serif;
@@ -34,7 +37,7 @@
     background: rgba(48, 48, 48, 0.1);
   }
   .project-card {
-    @apply border border-border;
+    @apply border border-border ;
     background: rgba(48, 48, 48, 0.1);
     backdrop-filter: blur(35px);
   }
@@ -48,7 +51,7 @@
     @apply grayscale w-[80px] h-[80px] border border-border rounded-2xl flex items-center justify-center cursor-pointer transition-all hover:grayscale-0;
   }
   .blog-card {
-    @apply border border-border rounded-[55px] p-[50px];
+    @apply border border-border rounded-3xl md:rounded-[55px] p-4 md:p-[50px];
     background: rgba(48, 48, 48, 0.1);
     backdrop-filter: blur(35px);
   }

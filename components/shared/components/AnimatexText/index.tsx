@@ -77,7 +77,7 @@ const AnimatedCharacters = ({ text, type }: AnimatedTextType) => {
                   key={index}
                 >
                   <motion.span
-                    className="text-primaryText text-[80px] leading-[115%] mt-[10px]"
+                    className="text-primaryText text-2xl leading-[115%] md:text-[80px]"
                     style={{ display: "inline-block" }}
                     variants={item}
                   >

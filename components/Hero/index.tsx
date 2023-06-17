@@ -45,13 +45,13 @@ const Hero = () => {
     },
   };
   return (
-    <div className="ctr relative mt-[250px]">
+    <div className="ctr relative section-gap">
       <Image
         src={bluredElipse}
         width={1000}
         height={1000}
         alt="blured eliplse"
-        className="animate-pulse absolute -z-10 top-[-50%] left-[10%]"
+        className="animate-pulse absolute -z-10 top-[-100px] left-[100px] w-[200px] md:top-[-50%] md:left-[10%] md:w-full"
       />
       <motion.div
         className="flex items-center gap-3 mt-5"
@@ -59,10 +59,10 @@ const Hero = () => {
         animate={"visible"}
         variants={spanAnimationObj}
       >
-        <span className="relative p-1 shadow-primary bg-primary rounded-full animate-pulse">
-          <span className="absolute left-0 top-0 p-1 blur-sm shadow-primary bg-primary rounded-full"></span>
+        <span className="relative p-1 rounded-full shadow-primary bg-primary animate-pulse">
+          <span className="absolute top-0 left-0 p-1 rounded-full blur-sm shadow-primary bg-primary"></span>
         </span>
-        <p className="text-secondaryText font-medium">
+        <p className="font-medium text-secondaryText">
           Available for new projects
         </p>
       </motion.div>
@@ -88,15 +88,14 @@ const Hero = () => {
               initial="hidden"
               animate={"visible"}
               variants={spanAnimationObj}
-              aria-errormessage=""
-              className="text-secondaryText text-xl text-end"
+              className="text-sm text-secondaryText text-end md:text-xl"
             >
               Currently working as a Frontend web <br /> Developer & UI/UX
               Designer at{" "}
-              <span className="text-primary underline">Elbotola</span>
+              <span className="underline text-primary">Elbotola</span>
               <Link
                 href="/about"
-                className="flex gap-5 justify-end items-center text-secondaryText underline text-lg mt-6"
+                className="flex items-center justify-end gap-5 mt-3 text-sm underline text-secondaryText md:text-lg md:mt-6"
               >
                 Read more
                 <UpRightIcon strokeColor="#fafafa" />
