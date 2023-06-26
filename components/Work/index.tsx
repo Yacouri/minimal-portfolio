@@ -54,6 +54,20 @@ const Work = () => {
           caption="As someone who love build in public concept, i'am currently working on Bafancy"
         />
       </div>
+      {/*  */}
+      {/* <div className="relative flex overflow-x-hidden">
+        <div className="flex gap-10 py-12 animate-marquee whitespace-nowrap">
+          {projects.map((project: TProject, index) => (
+            <Project {...project} key={index} />
+          ))}
+        </div>
+
+        <div className="flex gap-10 absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+          {projects.map((project: TProject, index) => (
+            <Project {...project} key={index} />
+          ))}
+        </div>
+      </div> */}
       <div className="scroll-bar flex overflow-x-scroll gap-5 mt-5 md:mt-150">
         {projects.map((project: TProject, index) => (
           <Project {...project} key={index} />

@@ -14,7 +14,7 @@ const TechStack = () => {
     <AnimatedSection>
       <div
         className="ctr flex flex-col justify-between items-center relative section-gap md:flex-row"
-        id="tech-stack"
+        id="stack"
       >
         <SectionHeader
           title="Tech & Tools"

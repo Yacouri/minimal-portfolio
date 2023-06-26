@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  /* html {
     scroll-behavior: smooth;
-  }
-  body{
+  } */
+  body {
     /* font-family: 'Raleway', sans-serif; */
+    overscroll-behavior-y: none;
+    user-select: none;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #0A0C0F;
     /* overflow-x: hidden; */
+  }
+  *, *:before, *:after { margin: 0;
+  padding: 0;
+    box-sizing: border-box;
   }
   .ctr {
     @apply w-full p-5 mx-auto md:max-w-7xl md:p-0;
@@ -57,6 +65,11 @@
   }
   .contact-card {
     @apply border border-border rounded-[58px] p-6;
+    background: rgba(48, 48, 48, 0.1);
+    backdrop-filter: blur(35px);
+  }
+  .burger-menu {
+    @apply border border-border absolute z-50 flex justify-center items-center flex-col transition-all w-[95%] bg-secondary left-1/2 -translate-x-1/2 p-4 rounded-lg gap-5 mt-5 md:hidden;
     background: rgba(48, 48, 48, 0.1);
     backdrop-filter: blur(35px);
   }

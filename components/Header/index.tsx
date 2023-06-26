@@ -6,8 +6,8 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState<String>("Home");
   const routes = [
     { name: "Home", path: "/" },
-    { name: "Stack", path: "/#Stack" },
-    { name: "Blog", path: "/#Blog" },
+    { name: "Stack", path: "#stack" },
+    { name: "Blog", path: "#blog" },
     { name: "Contact", path: "mailto:co.yacouri@gmail.com" },
   ];
 
@@ -39,23 +39,35 @@ const Header = () => {
             ))}
           </ul>
           <div
-            className={`flex flex-col gap-[5px] cursor-pointer md:hidden transition-all ${
-              open && "rotate-90"
-            }`}
+            className="relative flex flex-col gap-[5px] cursor-pointer md:hidden"
             onClick={() => setOpen((prev) => !prev)}
           >
-            <span className="rounded-full w-[24px] h-[3px] bg-white"></span>
-            <span className="rounded-full w-[24px] h-[3px] bg-white"></span>
-            <span className="rounded-full w-[24px] h-[3px] bg-white"></span>
+            <span
+              className={`w-[24px] h-[3px] bg-white ${
+                open &&
+                "rotate-45 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              } transition-all `}
+            ></span>
+            <span
+              className={`w-[24px] h-[3px] bg-white ${
+                open &&
+                "-rotate-45 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              } transition-all`}
+            ></span>
           </div>
         </div>
       </div>
       {/* Burger menu */}
       {open && (
-        <ul
-          className={`flex flex-col absolute translate-y-[${translateY}px] transition-all w-full bg-secondary left-0 p-4 rounded-lg gap-5 mt-5 md:hidden`}
-        >
-          <li>
+        <ul className={`burger-menu translate-y-[${translateY}px]`}>
+          {routes.map(({ name, path }, index) => (
+            <li className="" key={index} onClick={() => setOpen(false)}>
+              <Link className="text-white text-md" href={path}>
+                {name}
+              </Link>
+            </li>
+          ))}
+          {/* <li>
             <Link href="/#tech-stack" className="nav-link">
               Stack
             </Link>
@@ -74,7 +86,7 @@ const Header = () => {
             <a href="mailto:co.yacouri@gmail.com" className="nav-link">
               Contact
             </a>
-          </li>
+          </li> */}
         </ul>
       )}
     </nav>
