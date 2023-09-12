@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  *, *:before, *:after { margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #121316;
+    }
+}
+
+@layer components {
+  .tech-card {
+    @apply grayscale w-[70px] h-[70px] border border-light rounded-2xl flex items-center justify-center cursor-pointer transition-all hover:grayscale-0;
+  }
+  .underlined::before {
+    @apply bg-accent md:w-[226px] w-[135px];
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    height: 8px;
+    /* margin-top: 10px; */
+  }
+  .link-button {
+    @apply flex gap-2 text-white md:my-10 my-0 border border-light rounded-xl px-5 py-2 transition-all hover:bg-obsi;
+  }
+  .blog-link {
+    bottom: 6px;
+    right: 6px;
+    padding: 6px;
+    border-radius: 4px;
+    background: rgba(203, 238, 76, 0.10);
+  }
+  .burger-menu {
+    @apply border border-light absolute z-50 flex justify-center items-center flex-col transition-all w-[95%] bg-secondary left-1/2 -translate-x-1/2 p-4 rounded-lg gap-5 mt-5 md:hidden;
+    background: rgba(48, 48, 48, 0.1);
+    backdrop-filter: blur(35px);
+  }
+  .nav-link {
+    @apply text-white font-medium transition-all hover:text-muted;
+  }
+  .nav-link--active {
+    @apply py-3 px-6 border border-light rounded-[10px];
+    background: rgba(48, 48, 48, 0.1);
+  }
+}

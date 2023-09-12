@@ -1,9 +1,10 @@
+const { withContentlayer } = require("next-contentlayer");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ["res.cloudinary.com"],
+  experimental: {
+    appDir: true,
   },
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig);

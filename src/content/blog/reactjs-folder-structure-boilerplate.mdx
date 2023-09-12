@@ -1,0 +1,113 @@
+---
+title: ⚛️ ReactJS folder structure + Boilerplate.
+description: There are many folders structure to follow in ReactJS , And you might be confused which one you have...
+tags:
+  - javascript
+  - react
+  - webdev
+  - tutorial
+---
+
+There are many folders structure to follow in `ReactJS` , And you might be confused which one you have to pick for your next project 🤔. We will answer this question in this article.
+
+And i’m going to share with you a boilerplate that i will be using for my next projects.
+
+## About ReactJS folders structure ⚛
+
+By default `ReactJS` comes with a simple project setup, so for those who never coded with react they shouldn’t be worried that much about folders structure.
+
+Otherwise if you are experienced with react then your time has come to organize your application structure.
+
+---
+
+## Explaining each folder’s role 📁
+
+Our focus will be in the `src` folder where we’re going to structure our folders.
+
+![Folders structure](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mho9d3y4rnrwy7ysfgy5.png)
+
+(For the folder icons i am using a vs-code extension called “ Material Icon Theme”) intermediate
+
+### 📁 Assets
+
+- Here we group all of our media files.
+- I personally prefer to create subfolders such as `Images, Icons, Videos, Audios` etc....
+
+---
+
+You might want to put all of the components in one place, but you better break it into 2 folders. (Components & Containers).
+
+### 📁 Components
+
+- This folder contains all of our application presentational components (Stateless Components).
+
+### 📁 Containers
+
+- In this folder we have the Stateful components (Smart component) where we keep tracking the state.
+
+### 📁 Constants
+
+- In this file we group all constants like regex.
+
+### 📁 Helpers
+
+- Here we create and export functions that will be re-used in different places in our application.
+
+### 📁 Hooks
+
+- A folder made for customized hooks.
+
+### 📁 Layouts
+
+- It contains layout files such as `Navbar, Footer, Sidebar` .
+- Layouts are used to wrap a specific components.
+
+### 📁 Pages
+
+- This folder contains pages components like `Home, Contact` etc...
+- Each page wrapped with a specific `Layout`
+
+### 📁 Validations
+
+- Here we write our form validation and rules using a library like [Formik](https://formik.org/docs/overview) .
+
+### 📁 Services
+
+- In this folder we manage all of the API requests by creating files for each service.
+
+### 📁 Context
+
+- This folder contains all the context files where we manage and globalize the state in our application such as theming styles.
+
+### 📁 Config
+
+- All of our application configuration will be here in this folder.
+
+### 📁 i18n
+
+- This folder is made for multi-language support.
+- You can create subfolders with a `JSON` file for each language you want to translate.
+- Take a look to their Step by Step guide [HERE](https://react.i18next.com/latest/using-with-hooks) .
+
+---
+
+### ✨ Keep consistency in your code
+
+- By adding `Eslint` & `Prettier` to your project it will give you :
+  - A nice linting environment.
+  - Correct bad coding practices.
+  - Make your code clean and consistent.
+
+---
+
+## Boilerplate
+
+I created a Github repository with the same folder structure that i explained above. if you ever want to use it here is the link [[HERE]](https://github.com/Yacouri/reactjs-folders-boilerplate)
+
+## Conclusion
+
+Alright so the structure that i followed it's based on my experience and also depends on the project .
+
+If you feel good with your folder structure ✅ then you are not obliged to follow the same structure as mine.
+
+Thank you for reading this article ❤️
