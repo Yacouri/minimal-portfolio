@@ -10,7 +10,7 @@ type TStack = {
 
 export const TechStack = () => {
   return (
-    <div>
+    <div id="stack">
       <Title
         sectionTitle="Tech & Tools"
         caption="As a Frontend Developer here are some

@@ -8,7 +8,7 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState<String>("Home");
   const routes = [
     { name: "Home", path: "/" },
-    { name: "Work", path: "/" },
+    { name: "Work", path: "#work" },
     { name: "Stack", path: "#stack" },
     { name: "Blog", path: "#blog" },
     { name: "Contact", path: "mailto:co.yacouri@gmail.com" },

@@ -11,10 +11,26 @@ const SocialNetwork = () => {
     <div>
       <Title sectionTitle="Social Network" />
       <div className="grid grid-cols-2 gap-3 p-5 mt-0 md:mt-[25px] md:grid-cols-4 md:p-0">
-        <LinkButton url="#" label="Github" icon={<GithubIcon />} />
-        <LinkButton url="#" label="Twitter" icon={<TwitterIcon />} />
-        <LinkButton url="#" label="Dribbble" icon={<DribbbleIcon />} />
-        <LinkButton url="#" label="Behance" icon={<BehanceIcon />} />
+        <LinkButton
+          url="https://github.com/Yacouri"
+          label="Github"
+          icon={<GithubIcon />}
+        />
+        <LinkButton
+          url="https://twitter.com/zyacouri"
+          label="Twitter (X)"
+          icon={<TwitterIcon />}
+        />
+        <LinkButton
+          url="https://dribbble.com/yacouri"
+          label="Dribbble"
+          icon={<DribbbleIcon />}
+        />
+        <LinkButton
+          url="https://www.behance.net/zouhiryacouri"
+          label="Behance"
+          icon={<BehanceIcon />}
+        />
       </div>
     </div>
   );
