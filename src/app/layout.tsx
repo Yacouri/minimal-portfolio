@@ -26,7 +26,11 @@ const Satooshi = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NODE_ENV == "development"
+      ? "http://localhost:3000"
+      : "https://yacouri.com"
+  ),
   title: {
     default: "Yacouri",
     template: "%s | Yacouri",
@@ -52,7 +56,7 @@ export default function RootLayout({
             background:
               "linear-gradient(93deg, rgba(186, 238, 76, 0.60) 4.22%, rgba(65, 39, 223, 0.34) 36.37%, rgba(242, 4, 4, 0.10) 107.09%)",
             filter: "blur(154.5454559326172px)",
-            zIndex: -1
+            zIndex: -1,
           }}
           className="fixed w-[300px] h-[300px] rounded-[600px] top-[-100px] right-0 md:w-[600px] md:h-[600px]"
         ></div>

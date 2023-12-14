@@ -16,7 +16,6 @@ export const contentType = "image/png";
 // Image generation
 export default async function Image({ params }: { params: { slug: string } }) {
   const doc = allDocs.find((d) => d.slug === `/blog/${params.slug}`);
-  console.log(11, params.slug);
   const SatoshiBold = fetch(
     new URL("../../../fonts/Satoshi-Bold.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
