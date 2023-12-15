@@ -14,6 +14,7 @@ const config = {
       colors: {
         creamy: "#F2F2F2",
         accent: "#CBEE4C",
+        chip: "#303030",
         obsi: "#191A1D",
         secondary: "#ADADAD",
         muted: "#717173",

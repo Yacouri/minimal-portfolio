@@ -16,7 +16,7 @@ const ProjectCard = ({ name, tags, url, img }: ProjectProps) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col px-10 pt-10 bg-obsi rounded-md"
+      className="group flex flex-col px-10 pt-10 bg-obsi rounded-md border border-light hover:bg-transparent"
     >
       <div className="flex justify-between mb-4">
         <div>
