@@ -26,7 +26,7 @@
     /* margin-top: 10px; */
   }
   .link-button {
-    @apply flex gap-2 text-white md:my-10 my-0 border border-light rounded-xl px-5 py-2 transition-all hover:bg-obsi;
+    @apply flex justify-center items-center gap-2 text-white md:my-10 my-0 border border-light rounded-xl px-5 py-2 transition-all hover:bg-obsi;
   }
   .blog-link {
     @apply flex items-center justify-center w-[30px] h-[30px] rounded-full transition-all p-[6px] border-[0.5px] border-white text-white text-xs group-hover:bg-accent group-hover:text-black group-hover:border-transparent;
@@ -37,10 +37,10 @@
     backdrop-filter: blur(35px);
   }
   .nav-link {
-    @apply text-white font-medium transition-all hover:text-muted;
+    @apply text-muted font-medium transition-all hover:text-muted;
   }
   .nav-link--active {
-    @apply py-3 px-6 border border-light rounded-[10px];
+    @apply text-accent py-3 px-6 border border-light rounded-[10px];
     background: rgba(48, 48, 48, 0.1);
   }
 }

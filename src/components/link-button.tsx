@@ -10,9 +10,9 @@ type ButtonProps = {
 const LinkButton = ({ url, icon, label }: ButtonProps) => {
   return (
     <div>
-      <Link href={url} className="link-button justify-center items-center">
+      <Link href={url} className="link-button">
         {icon}
-        <span>{label}</span>
+        <span className="text-lg">{label}</span>
       </Link>
     </div>
   );

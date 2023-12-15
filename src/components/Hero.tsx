@@ -6,9 +6,9 @@ const Hero = () => {
       <h1 className="text-creamy text-4xl font-bold">
         Hello, I&apos;m Zouhir Yacouri
       </h1>
-      <p className="text-creamy text-base font-medium mt-[30px] leading-7">
+      <p className="text-creamy text-base font-normal mt-[30px] leading-7">
         Working as a Frontend Developer & Ui/UX Designer at
-        <span className="px-2 py-[5px] bg-obsi ml-1 border-[1px] border-light rounded-md">
+        <span className="mx-2 px-2 py-[5px] bg-obsi border-[1px] border-light rounded-md">
           ⚽ Elbotola
         </span>{" "}
         learning new concepts,

@@ -11,23 +11,23 @@ const Header = () => {
     { name: "Work", path: "#work" },
     { name: "Stack", path: "#stack" },
     { name: "Blog", path: "#blog" },
-    { name: "Contact", path: "mailto:co.yacouri@gmail.com" },
+    { name: "Contact", path: "mailto:hi@yacouri.com" },
   ];
 
   let translateY = open ? 0 : -1000;
   // const [translateY, setTranslateY] = useState<Number>(-1000);
   return (
     <nav className="relative py-2 mt-4 rounded-xl mx-5 md:mx-0">
-      <div className="flex items-center justify-between md:justify-start md:gap-[100px]">
+      <div className="flex items-center justify-between md:justify-start md:gap-[80px]">
         <div>
           <Link href="/">
-            <h1 className="text-white font-bold text-4xl">
-              YZ<span className="text-primary">.</span>
+            <h1 className="text-white font-semibold text-4xl">
+              Yz<span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
         <div>
-          <ul className="hidden md:flex md:gap-[60px] gap-9">
+          <ul className="hidden md:flex md:gap-[24px] gap-9">
             {routes.map(({ name, path }, index) => (
               <li key={index} onClick={() => setActiveLink(name)}>
                 <Link

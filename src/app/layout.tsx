@@ -54,13 +54,13 @@ export default function RootLayout({
         <div
           style={{
             background:
-              "linear-gradient(93deg, rgba(186, 238, 76, 0.60) 4.22%, rgba(65, 39, 223, 0.34) 36.37%, rgba(242, 4, 4, 0.10) 107.09%)",
+              "linear-gradient(93deg, rgba(154, 154, 154, 0.20) 50%, rgba(25, 29, 35, 0.00) 100%)",
             filter: "blur(154.5454559326172px)",
             zIndex: -1,
           }}
           className="fixed w-[300px] h-[300px] rounded-[600px] top-[-100px] right-0 md:w-[600px] md:h-[600px]"
         ></div>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[700px] mx-auto">
           <Header />
           {children}
           <Footer />

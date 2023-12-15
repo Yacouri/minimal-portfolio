@@ -6,7 +6,7 @@ import { allDocs } from "contentlayer/generated";
 const Blog = () => {
   const doc = allDocs;
   return (
-    <div>
+    <div id="blog">
       <Title
         sectionTitle="Blog"
         caption="Sometimes i write articles about, Tech tutorials,
