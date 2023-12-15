@@ -37,13 +37,6 @@ const ProjectCard = ({ name, tags, url, img }: ProjectProps) => {
       <Image className="justify-self-end" alt={`${name} Project`} src={img} />
     </Link>
   );
-  // <div className="min-h-[172px] flex flex-col justify-between bg-obsi border border-light rounded-lg p-4 transition-all hover:scale-[0.95]">
-  //   <div>
-  //     <Image src={img} alt={"logo"} width={50} height={50} />
-  //   </div>
-  //   <div>
-  //   </div>
-  // </div>
 };
 
 export default ProjectCard;

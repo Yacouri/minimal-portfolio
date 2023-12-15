@@ -7,6 +7,8 @@ import naturaWeb from "@/images/Natura-web.png";
 import _3drWeb from "@/images/3DR-web.png";
 import bafancyWeb from "@/images/Bafancy-web.png";
 import KuuCoinWeb from "@/images/KuuCoin-web.png";
+import Link from "next/link";
+import { FiMail } from "react-icons/fi";
 
 const WorkSection = () => {
   const projects = [
@@ -51,6 +53,19 @@ const WorkSection = () => {
         {projects.map((p, index) => (
           <ProjectCard {...p} key={index} />
         ))}
+        <div className="flex flex-col justify-center items-center border-dashed rounded-md">
+          <p className="text-muted font-bold text-center text-4xl">
+            <span className="text-accent">Be</span> The next
+            <br /> Project
+          </p>
+          <Link
+            href="mailto:hi@yacouri.com"
+            className="flex items-center justify-center rounded-full transition-all px-[12px] py-[6px] text-xs bg-accent text-black font-medium gap-1 mt-6"
+          >
+            Connect
+            <FiMail />
+          </Link>
+        </div>
       </div>
     </div>
   );
