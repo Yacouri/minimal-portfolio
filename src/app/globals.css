@@ -37,10 +37,10 @@
     backdrop-filter: blur(35px);
   }
   .nav-link {
-    @apply text-muted font-medium transition-all hover:text-muted;
+    @apply text-muted font-medium transition-all hover:text-accent;
   }
   .nav-link--active {
-    @apply text-accent py-3 px-6 border border-light rounded-[10px];
+    @apply text-accent;
     background: rgba(48, 48, 48, 0.1);
   }
 }

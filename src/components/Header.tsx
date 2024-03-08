@@ -18,7 +18,7 @@ const Header = () => {
   // const [translateY, setTranslateY] = useState<Number>(-1000);
   return (
     <nav className="relative py-2 mt-4 rounded-xl mx-5 md:mx-0">
-      <div className="flex items-center justify-between md:justify-start md:gap-[80px]">
+      <div className="flex items-center justify-between md:gap-[80px]">
         <div>
           <Link href="/">
             <h1 className="text-white font-semibold text-4xl">
